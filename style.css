@@ -144,3 +144,12 @@ textarea {
     width: 100%;
     min-width: 0;
 }
+
+#date-section input[type="date"] {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+}
