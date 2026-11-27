@@ -1,0 +1,146 @@
+/* ページ全体の設定 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f4f6f5;
+    color: #333;
+    margin: 0;
+    padding: 16px;
+}
+
+/* タイトル */
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    color: #16804a;
+    margin: 0;
+}
+
+header p {
+    color: #777;
+    font-size: 14px;
+}
+
+/* メイン画面 */
+main {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* 各セクション */
+section {
+    background-color: white;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px #00000008;
+}
+
+h2 {
+    font-size: 18px;
+    margin-top: 0;
+}
+
+/* 日付入力欄 */
+input[type="date"] {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    max-width: 100%;
+}
+
+/* シフト表 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th, td {
+    padding: 8px 2px;
+    text-align: center;
+    font-size: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+/* 土日の色分け */
+.saturday {
+    color: #2563eb;
+}
+
+.sunday {
+    color: #dc2626;
+}
+
+/* 時間帯選択ボタン */
+.shift-button {
+    width: 100%;
+    min-height: 44px;
+    border: none;
+    border-radius: 6px;
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.shift-button.selected {
+    background-color: #16804a;
+    color: white;
+}
+
+/* 文章表示欄 */
+textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    resize: vertical;
+}
+
+/* コピーボタン */
+#copy-button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 12px;
+    background-color: #16804a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* リセットボタン */
+#reset-button {
+    margin-top: 12px;
+    padding: 8px 12px;
+    background-color: #eee;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+/* 提出期間のレイアウト調整 */
+#date-section {
+    display: grid;
+    grid-template-columns: 60px minmax(0, 1fr);
+    gap: 12px;
+    align-items: center;
+}
+
+#date-section h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+}
+
+#date-section input[type="date"] {
+    width: 100%;
+    min-width: 0;
+}

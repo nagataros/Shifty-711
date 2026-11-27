@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>しふぽん。</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>しふぽん。</h1>
+        <p>ポンっと選んで、シフト提出。</p>
+    </header>
+
+    <main>
+        <!-- 提出期間 -->
+        <section id="date-section">
+            <h2>01 提出期間</h2>
+
+            <label for="start-date">開始日</label>
+            <input type="date" id="start-date">
+
+            <label for="end-date">終了日</label>
+            <input type="date" id="end-date">
+        </section>
+
+        <!-- 時間帯の選択 -->
+        <section>
+            <h2>02 出勤可能な時間帯</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>日付</th>
+                        <th>6〜9時</th>
+                        <th>9〜13時</th>
+                        <th>13〜17時</th>
+                        <th>17〜21時</th>
+                    </tr>
+                </thead>
+                <tbody id="shift-table">
+                </tbody>
+            </table>
+
+            <button id="reset-button">リセット</button>
+        </section>
+
+        <!-- LINE送信用文章 -->
+        <section>
+            <h2>03 送信内容の確認</h2>
+
+            <textarea id="output" readonly
+                placeholder="ここに文章が表示されます">
+            </textarea>
+
+            <button id="copy-button">文章をコピー</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
